@@ -29,16 +29,9 @@ export const Inner = styled.div`
 
   > div {
     display: flex;
+    flex-direction: column;
     gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    > div {
-      font-weight: 700;
-      font-size: 6rem;
-      line-height: 1;
-      white-space: nowrap;
-    }
+    align-items: center;
   }
 
   @media (max-width: 768px) {
@@ -50,11 +43,27 @@ export const Inner = styled.div`
     }
 
     > div {
-      gap: 0.6rem;
+      gap: 0.8rem;
+    }
+  }
+`;
 
-      > div {
-        font-size: 3rem;
-      }
+export const TextRow = styled.div`
+  display: flex;
+  gap: 0.6rem;
+
+  > div {
+    font-weight: 700;
+    font-size: 6rem;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 768px) {
+    gap: 0.4rem;
+
+    > div {
+      font-size: 3rem;
     }
   }
 `;

@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import ic_import from '../../../../public/svgs/ic_import.svg';
-import { Wrapper, Inner, SecondOverlay } from './styles';
+import { Wrapper, Inner, SecondOverlay, TextRow } from './styles';
 import { Dispatch, SetStateAction, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
@@ -10,12 +10,8 @@ const Preloader = ({
 }: {
   setComplete: Dispatch<SetStateAction<boolean>>;
 }) => {
-  const word = [
-    'M', 'e', 'd', 'i', 'a',
-    'F', 'o', 'r', 'g', 'e',
-    ' ', 'S', 'o', 'l', 'u',
-    't', 'i', 'o', 'n', 's', '.',
-  ];
+  const line1 = ['M', 'e', 'd', 'i', 'a', 'F', 'o', 'r', 'g', 'e'];
+  const line2 = ['S', 'o', 'l', 'u', 't', 'i', 'o', 'n', 's', '.'];
 
   const spans = useRef<any>([]);
   const imageRef = useRef(null);
@@ -69,18 +65,20 @@ const Preloader = ({
         <Inner>
           <Image ref={imageRef} src={ic_import} alt="import icon" />
           <div>
-            {word.map((t, i) => (
-              <div
-                key={i}
-                ref={(element) => (spans.current[i] = element)}
-              >
-                {t}
-              </div>
-            ))}
+            <TextRow>
+              {line1.map((t, i) => (
+                <div key={i} ref={(el) => (spans.current[i] = el)}>{t}</div>
+              ))}
+            </TextRow>
+            <TextRow>
+              {line2.map((t, i) => (
+                <div key={i + line1.length} ref={(el) => (spans.current[i + line1.length] = el)}>{t}</div>
+              ))}
+            </TextRow>
           </div>
         </Inner>
       </Wrapper>
-      <SecondOverlay ref={secondOverlayRef}></SecondOverlay>
+      <SecondOverlay ref={secondOverlayRef} />
     </>
   );
 };

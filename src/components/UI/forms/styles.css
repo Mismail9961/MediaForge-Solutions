@@ -1,5 +1,3 @@
-/* components/form/styles.css */
-
 .form-section {
   background-color: #070606;
   color: white;
@@ -72,6 +70,7 @@
   padding: 15px 14px;
   font-size: 15px;
   transition: border 0.3s, box-shadow 0.3s;
+  width: 100%;
 }
 
 .form-input:focus,
@@ -104,6 +103,7 @@
   transform: scale(1.02);
 }
 
+/* Tablet */
 @media (max-width: 768px) {
   .form-card {
     flex-direction: column;
@@ -111,6 +111,55 @@
 
   .form-left,
   .form-right {
-    padding: 30px;
+    padding: 25px;
+  }
+
+  .form-left h2 {
+    font-size: 28px;
+  }
+
+  .form-left p {
+    font-size: 20px;
+  }
+}
+
+/* iPhone 4 / small devices */
+@media (max-width: 480px) {
+  .form-section {
+    padding: 40px 10px;
+  }
+
+  .form-card {
+    flex-direction: column;
+    border-radius: 12px;
+  }
+
+  .form-left,
+  .form-right {
+    padding: 20px;
+  }
+
+  .form-left h2 {
+    font-size: 22px;
+  }
+
+  .form-left p {
+    font-size: 16px;
+  }
+
+  .form-label {
+    font-size: 13px;
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .submit-button {
+    font-size: 14px;
+    padding: 12px;
   }
 }

@@ -21,11 +21,16 @@ export const Inner = styled.div`
 `;
 
 export const LogoContainer = styled.div`
+  display: flex;
+  align-items: center;
+
   @media (max-width: 768px) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; // ✅ Make logo on left & menu on right
     width: 100%;
+
+    h1 {
+      font-size: 1.25rem; // ✅ Optional: Smaller text on mobile
+    }
   }
 `;
 
@@ -41,7 +46,7 @@ export const BurgerMenu = styled.div`
       position: absolute;
       background: var(--emerald);
       width: '150px';
-      height: '200px';
+      height: '100px';
       border-radius: 25px;
       z-index: 1;
       top: 50px;
@@ -80,6 +85,7 @@ export const Nav = styled.div`
     opacity: 0;
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition-delay: 0.5s;
+    
 
     &.active {
       opacity: 1;

@@ -1,6 +1,6 @@
 "use client";
-import { ContactForm, FAQ } from "@/components";
 
+import { ContactForm, FAQ } from "@/components";
 import styles from "@/app/services/Services.module.css";
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/UI/SectionTitle/SectionTitle";

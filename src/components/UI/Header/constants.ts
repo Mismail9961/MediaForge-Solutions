@@ -1,7 +1,7 @@
 export const menu = {
   open: {
-    width: '250px',
-    height: '300px',
+    width: '200px',
+    height: '200px',
     top: '-25px',
     right: '-25px',
     transition: { duration: 0.75, type: 'tween', ease: [0.76, 0, 0.24, 1] },
