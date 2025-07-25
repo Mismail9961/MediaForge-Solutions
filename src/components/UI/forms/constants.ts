@@ -1,0 +1,15 @@
+export const serviceOptions = [
+  { value: '', label: '-- Select a Service --' },
+  { value: 'seo', label: 'Search Engine Optimization (SEO)' },
+  { value: 'social', label: 'Social Media Marketing' },
+  { value: 'content', label: 'Content Creation' },
+  { value: 'ppc', label: 'Pay-Per-Click (PPC) Advertising' },
+  { value: 'email', label: 'Email Marketing' },
+  { value: 'cro', label: 'Conversion Rate Optimization (CRO)' },
+  { value: 'web', label: 'Web Design & Development' },
+  { value: 'strategy', label: 'Brand Strategy & Positioning' },
+  { value: 'influencer', label: 'Influencer Marketing' },
+  { value: 'video', label: 'Video Marketing' },
+  { value: 'reputation', label: 'Online Reputation Management' },
+  { value: 'analytics', label: 'Analytics & Reporting' },
+];

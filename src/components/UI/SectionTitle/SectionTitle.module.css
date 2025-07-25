@@ -1,0 +1,16 @@
+.section {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.title {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #1433D6;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  color: white;
+}
